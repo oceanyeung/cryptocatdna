@@ -16,9 +16,15 @@ function genColors(){
 
 //This function code needs to modified so that it works with Your cat code.
 function headColor(color,code) {
-    $('.cat__head, .cat__chest').css('background', '#' + color)  //This changes the color of the cat
-    $('#headcode').html('code: '+code) //This updates text of the badge next to the slider
-    $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the cat
+    let hsl = (rgbToHsl(hexToRgb(color)));
+    let darkenHSL = scaleHSLL(hsl, 0.85);
+    let rgb = hslToRgb(darkenHSL);
+    let darkRGB = '#' + rgb.r.toString(16) + rgb.g.toString(16) + rgb.b.toString(16);
+
+    $('#head, #body .chest, .ears, .frontpaw, .tail').css('background', '#' + color); //This changes the color of the cat
+    $('.backpaw').css('background', darkRGB);
+    $('#headcode').html('code: '+code); //This updates text of the badge next to the slider
+    $('#dnabody').html(code); //This updates the body color part of the DNA that is displayed below the cat
 }
 
 
