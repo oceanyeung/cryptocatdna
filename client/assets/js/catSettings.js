@@ -59,9 +59,9 @@ $('#bodycolor').change(()=>{
     headColor(colors[colorVal],colorVal)
 });
 
-$('#mouthcolor').change(()=>{
-  var colorVal = $('#mouthcolor').val();
-  mouthColor(colors[colorVal],colorVal);
+$('#facecolor').change(()=>{
+  var colorVal = $('#facecolor').val();
+  faceColor(colors[colorVal],colorVal);
 });
 
 $('#eyescolor').change(()=>{
