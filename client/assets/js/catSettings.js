@@ -57,4 +57,19 @@ function renderCat(dna){
 $('#bodycolor').change(()=>{
     var colorVal = $('#bodycolor').val()
     headColor(colors[colorVal],colorVal)
-})
+});
+
+$('#mouthcolor').change(()=>{
+  var colorVal = $('#mouthcolor').val();
+  mouthColor(colors[colorVal],colorVal);
+});
+
+$('#eyescolor').change(()=>{
+  var colorVal = $('#eyescolor').val();
+  eyesColor(colors[colorVal],colorVal);
+});
+
+$('#earscolor').change(()=>{
+  var colorVal = $('#earscolor').val();
+  earsColor(colors[colorVal],colorVal);
+});

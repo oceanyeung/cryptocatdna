@@ -17,16 +17,34 @@ function genColors(){
 //This function code needs to modified so that it works with Your cat code.
 function headColor(color,code) {
     let hsl = (rgbToHsl(hexToRgb(color)));
-    let darkenHSL = scaleHSLL(hsl, 0.85);
+    let darkenHSL = scaleHslL(hsl, 0.85);
     let rgb = hslToRgb(darkenHSL);
     let darkRGB = '#' + rgb.r.toString(16) + rgb.g.toString(16) + rgb.b.toString(16);
 
-    $('#head, #body .chest, .ears, .frontpaw, .tail').css('background', '#' + color); //This changes the color of the cat
+    $('#head, #body .chest, .frontpaw, .tail').css('background', '#' + color); //This changes the color of the cat
     $('.backpaw').css('background', darkRGB);
     $('#headcode').html('code: '+code); //This updates text of the badge next to the slider
     $('#dnabody').html(code); //This updates the body color part of the DNA that is displayed below the cat
 }
 
+function mouthColor(color,code) {
+    $('.mouth, .nose_split').css('border-color', '#' + color); //This changes the color of the cat
+    $('.nose').css('background-color', '#' + color);
+    $('#mouthcode').html('code: '+code); //This updates text of the badge next to the slider
+    $('#dnamouth').html(code); //This updates the body color part of the DNA that is displayed below the cat
+}
+
+function eyesColor(color,code) {
+    $('.pupil').css('background-color', '#' + color);
+    $('#eyescode').html('code: '+code); //This updates text of the badge next to the slider
+    $('#dnaeyes').html(code); //This updates the body color part of the DNA that is displayed below the cat
+}
+
+function earsColor(color,code) {
+    $('.ears').css('background-color', '#' + color);
+    $('#earscode').html('code: '+code); //This updates text of the badge next to the slider
+    $('#dnaears').html(code); //This updates the body color part of the DNA that is displayed below the cat
+}
 
 //###################################################
 //Functions below will be used later on in the project

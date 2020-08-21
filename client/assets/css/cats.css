@@ -62,17 +62,17 @@ body {
 .eye.right .pupil {
     left: 12px;
 }
-#mouth {
+.mouth {
     position: absolute;
-    border: solid 2px #000;
+    border: solid 0 transparent;
+    border-bottom: solid 2px #000;
     border-radius: 0 0 60% 60%;
-    border-color: transparent transparent #000 transparent;
     width: 140px;
     height: 100px;
     bottom: 30px;
     left: 25px;
 }
-#nose {
+.nose {
     position: absolute;
     background-color: red;
     border: solid 1px #000;
@@ -82,10 +82,10 @@ body {
     left: 81px;
     top: 30px
 }
-#split {
+.nose_split {
     position: absolute;
-    border: solid 2px #000;
-    border-color: transparent #000 transparent transparent;
+    border: solid 0 transparent;
+    border-right: solid 2px #000;
     height: 62px;
     width: 2px;
     left: 90px;
